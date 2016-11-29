@@ -1,0 +1,33 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                color:blue ;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id ="s1"> </ul>
+        
+        <script>
+            function makeList(){
+                var userInput = document.getElementById("inputText");
+                
+                var lists = document.getElementById("s1");
+                var item = document.createElement("li");
+                
+                item.textContent = userInput.value;
+                
+                lists.appendChild(item);
+            }
+        </script>
+     
+       <textarea  rows="10" cols="80" id="inputText">Input tasks here</textarea>
+       <button onclick="makeList();">Crate list</button>  
+    </body>
+</html>
