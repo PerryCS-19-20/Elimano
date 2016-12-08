@@ -5,7 +5,7 @@ and open the template in the editor.
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title>Tic-Tac-Toe</title>
         <style>
              table{
                 font-size:80px;
@@ -19,13 +19,12 @@ and open the template in the editor.
             
         <script>        
             var player="X";
- 
             
             function play(cellid){
                 var cell = document.getElementById(cellid);
             
                
-             if(cell.textContent == " "){ 
+             if(cell.textContent == ""){ 
                  cell.textContent = player;
                 if(player == "X"){
                     player = "O";
@@ -38,6 +37,7 @@ and open the template in the editor.
                 
             
               function checkWin(){
+                  var win = document.getElementById("won");
                   check3cells("1","2","3");
                   check3cells("4","5","6");
                   check3cells("7","8","9");
@@ -49,9 +49,17 @@ and open the template in the editor.
                   check3cells("2","5","8");
                   check3cells("3","6","9");
                   
+                  if(check3cells == true){
+                      win.textContent=("YOU WON!");
+                  }
               }
             
-          
+          function check3cells(cell1 , cell2 , cell3 ){
+              if(cell1 == cell2 && cell2==cell3){
+                  return true;
+                  
+              }
+          }
            
             
         </script>
@@ -60,23 +68,23 @@ and open the template in the editor.
       
        <table border="1">
     <tr>
-        <td id="1" onclick="play('1');"> </td>
-        <td id="2" onclick="play('2');"> </td>
-        <td id="3" onclick="play('3');"> </td>
+        <td id="1" onclick="play('1');"></td>
+        <td id="2" onclick="play('2');"></td>
+        <td id="3" onclick="play('3');"></td>
     </tr>
     
    <tr>
-        <td id="4" onclick="play('4');"> </td>
-        <td id="5" onclick="play('5');"> </td>
-        <td id="6" onclick="play('6');"> </td>
+        <td id="4" onclick="play('4');"></td>
+        <td id="5" onclick="play('5');"></td>
+        <td id="6" onclick="play('6');"></td>
    </tr>
    
    <tr>
-        <td id="7" onclick="play('7');"> </td>
-        <td id="8" onclick="play('8');"> </td>
-        <td id="9" onclick="play('9');"> </td>
+        <td id="7" onclick="play('7');"></td>
+        <td id="8" onclick="play('8');"></td>
+        <td id="9" onclick="play('9');"></td>
     </tr>
         </table>
-        
+        <p id="won"></p>  
     </body>
 </html>

@@ -5,6 +5,25 @@ and open the template in the editor.
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+            #red{
+                color:red;
+                font-size:40px;
+            }
+            #green{
+                color:green;
+                font-size:40px;
+            }
+            
+            #yellow{
+                color:yellow;
+                font-size:40px;
+            }
+            #blue{
+                color:blue;
+                font-size:40px;
+            }
+        </style>
         <script>
             function changeColor(newcolor){
                document.body.style.backgroundColor = newcolor;
@@ -15,12 +34,13 @@ and open the template in the editor.
        
     </head>
     <body>
-        <span onclick="changeColor('red');">Red</span>
+        <p>What color do you like the screen to be, your choice.</p> 
+        <span onclick="changeColor('red');" id ="red">Red</span>
         <br>
-        <span onclick="changeColor('blue');">Blue</span>
+        <span onclick="changeColor('blue');" id ="blue">Blue</span>
         <br>
-        <span onclick="changeColor('green');">Green</span>
+        <span onclick="changeColor('green');" id ="green">Green</span>
         <br>
-        <span onclick="changeColor('yellow');">Yellow</span>
+        <span onclick="changeColor('yellow');" id="yellow">Yellow</span>
     </body>
 </html>

@@ -5,26 +5,33 @@ and open the template in the editor.
 <!DOCTYPE html>
 <html>
     <head>
-     
+        <title>Chalkboard</title>
     </head>
+    <style>
+        #s1{
+            color:red;
+        }  
+    </style>
     <body>
-        for(var i = 0; i < 100; i++){
-        <ul id ="s1"> </ul>
-        }
+        
+        <ul id ="s1">I will not </ul>
+        
         <script>
             function makeList(){
                 var userInput = document.getElementById("inputText");
                 
                 var lists = document.getElementById("s1");
+                for(var i = 0; i < 100; i++){
                 var item = document.createElement("li");
                 
-                item.textContent = userInput.value;
+                item.textContent = "I will not " + userInput.value;
                 
                 lists.appendChild(item);
+                }
             }
         </script>
      
        <textarea  rows="10" cols="80" id="inputText">Input tasks here</textarea>
-       <button onclick="makeList();">Crate list</button>  
+       <button onclick="makeList();">Create list</button>  
     </body>
 </html>
