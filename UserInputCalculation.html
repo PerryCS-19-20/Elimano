@@ -1,0 +1,48 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>  
+         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Cylinder Calc</title>
+        <script>
+            function calc() {
+                var h = parseFloat(document.getElementById("height").value);
+                var w = parseFloat(document.getElementById("width").value);
+                var l = parseFloat(document.getElementById("length").value);
+                var vol = document.getElementById("vol");
+
+
+                var area = l * w;          // Calculate area of bottom side
+                vol.value = (area * h).toFixed(2);   // Show volume of cube to 2 decimal places
+            }
+        </script>
+        <style>
+            input[type=number]{
+                width: 64px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1>Cube volume</h1>
+        <h2>v = LWH</h2>
+        l:<input type="number" id="length">
+        <br>
+        W:<input type="number" id="width">
+        <br>
+        H:<input type="number" id="height">
+        <br>
+        <button onclick="calc();">Calculate</button>
+        <hr>
+        V:<input type="output" id="vol"> 
+        
+        
+       <br>
+       <br>
+       <a href="siteMap.html">Site map</a>
+    </body>
+</html>
