@@ -23,6 +23,9 @@ and open the template in the editor.
                 color:blue;
                 font-size:40px;
             }
+            #white{
+                font-size:40px;
+            }
         </style>
         <script>
             function changeColor(newcolor){
@@ -34,7 +37,11 @@ and open the template in the editor.
        
     </head>
     <body>
-        <p>What color do you like the screen to be, your choice.</p> 
+        <h1 style="text-align:center;">Events!</h1>
+        <h3>What color do you like the screen to be, your choice.</h3> 
+        
+        <span onclick="changeColor('white');" id ="white">White</span>
+        <br>
         <span onclick="changeColor('red');" id ="red">Red</span>
         <br>
         <span onclick="changeColor('blue');" id ="blue">Blue</span>
@@ -42,5 +49,13 @@ and open the template in the editor.
         <span onclick="changeColor('green');" id ="green">Green</span>
         <br>
         <span onclick="changeColor('yellow');" id="yellow">Yellow</span>
+        <br>
+        <br>
+        
+        <p style="color:white;">Random hidden message</p>
+        <br>
+        <br>
+        <br>
+        <a href="siteMap.html">Site map</a>
     </body>
 </html>
